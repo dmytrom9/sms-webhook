@@ -1,0 +1,40 @@
+// Settings: https: //www.typescriptlang.org/docs/handbook/compiler-options.html
+{
+  "compilerOptions": {
+    "module": "commonjs", // module system to transpile to. So you can use import/export and it'll transpile to require
+    "moduleResolution": "node",
+    "target": "es2019", // transpile to target language
+    "strict": true,
+    "noImplicitReturns": false,
+    "rootDir": ".",
+    "sourceMap": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "strictNullChecks": false,
+    "allowJs": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowSyntheticDefaultImports": true, // allow no default imports
+    "preserveConstEnums": true, // do not clean up const enums so we can read the code after transpiling
+    "pretty": true,
+    "outDir": "dist",
+    "types": [
+      "node"
+    ],
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [ // libs to use for typescript to do type checking - "linting"
+      "es2019",
+      "dom",
+      "esnext.asynciterable"
+    ],
+    "resolveJsonModule": true
+  },
+  "exclude": [
+    "node_modules",
+    "dist",
+  ],
+  "ts-node": {"esm": true}
+}

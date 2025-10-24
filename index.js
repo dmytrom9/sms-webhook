@@ -5,6 +5,8 @@ import cors from "cors";
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+const allowedIps = ["188.42.218.183", "142.91.156.119"];
+
 // Middleware
 app.use(cors());
 app.use(bodyParser.json());
